@@ -3,12 +3,6 @@
     package="com.friendzone.learning_2017">
 
     <application>
-        <meta-data
-            android:name="com.parse.http://insta3334.herokuapp.com/parse"
-            android:value="@string/parse_server_url" />
-        <meta-data
-            android:name="com.parse.123456789987654322"
-            android:value="@string/parse_app_id" />
 
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
