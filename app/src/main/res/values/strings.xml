@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">learning_2017</string>
+    <string name="tony">Tony</string>
+    <string name="matthew_amp_tony"><![CDATA[Matthew & Tony]]></string>
+    <string name="button">Button</string>
+    <string name="secondscreen" />
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
