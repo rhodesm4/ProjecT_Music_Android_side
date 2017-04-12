@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ProjecT_Music_Android_side.iml" filepath="$PROJECT_DIR$/ProjecT_Music_Android_side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/learning_2017.iml" filepath="$PROJECT_DIR$/learning_2017.iml" />
+      <module fileurl="file://$PROJECT_DIR$/secondscreen/secondscreen.iml" filepath="$PROJECT_DIR$/secondscreen/secondscreen.iml" />
       <module fileurl="file://$PROJECT_DIR$/secondscreen/secondscreen.iml" filepath="$PROJECT_DIR$/secondscreen/secondscreen.iml" />
     </modules>
   </component>
