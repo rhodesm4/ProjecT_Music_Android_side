@@ -1,6 +1,7 @@
 package com.friendzone.learning_2017;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import com.parse.Parse;
 import android.app.Application;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
 }
 class App extends Application{

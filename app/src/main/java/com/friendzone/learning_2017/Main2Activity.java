@@ -1,6 +1,7 @@
 package com.friendzone.learning_2017;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,12 +16,16 @@ import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity {
 
+    MediaPlayer mySong;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mySong = MediaPlayer.create(Main2Activity.this, R.raw.daft);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +52,10 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void play(View v){
+        mySong.start();
     }
 
 }
