@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".Server_Info"
             android:label="@string/secondscreen">
 
         </activity>
