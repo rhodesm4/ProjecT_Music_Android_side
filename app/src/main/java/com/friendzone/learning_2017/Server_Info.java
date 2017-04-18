@@ -16,6 +16,6 @@ public class Server_Info extends Application {
             .server("http://insta3334.herokuapp.com/parse/")
             .build()
     );
-//testing123
+//testing12
 }
 }
