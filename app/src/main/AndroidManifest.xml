@@ -24,6 +24,13 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity
+
+            android:name=".Server_Info"
+            android:label="@string/secondscreen">
+
+        </activity>
+
     </application>
 
 
