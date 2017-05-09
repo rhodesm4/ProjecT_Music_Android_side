@@ -19,16 +19,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+
+            android:name=".Server_Info"
             android:label="@string/secondscreen">
 
         </activity>
         <activity
+
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity
+
+            android:name=".Server_Info"
+            android:label="@string/secondscreen">
+
+        </activity>
+
     </application>
 
 
