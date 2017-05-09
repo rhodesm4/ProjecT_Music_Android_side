@@ -25,7 +25,7 @@ public class Main2Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mySong = MediaPlayer.create(Main2Activity.this, R.raw.daft);
+        mySong = MediaPlayer.create(Main2Activity.this, R.raw.song);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
