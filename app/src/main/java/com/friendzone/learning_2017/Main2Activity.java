@@ -25,13 +25,13 @@ public class Main2Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mySong = MediaPlayer.create(Main2Activity.this, R.raw.song);
+        mySong = MediaPlayer.create(Main2Activity.this, R.raw.daft);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This pyramids shall rise again all hail Psedo", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
