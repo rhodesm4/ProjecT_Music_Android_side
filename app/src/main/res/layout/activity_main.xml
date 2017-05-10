@@ -32,6 +32,14 @@
         android:onClick="onClick"
         android:text="@string/button" />
 
+    <Button
+        android:id="@+id/music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/new_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:text="Now Playing" />
 
 
 </RelativeLayout>
