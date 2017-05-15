@@ -92,7 +92,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="48dp"
         android:clickable="true"
-        android:text="@string/Sign Up" />
+        android:text="Sign Up" />
 
 
 </RelativeLayout>
