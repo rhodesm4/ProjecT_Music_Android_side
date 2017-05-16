@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import com.parse.Parse;
 import android.app.Application;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //what is this doing right here?
         final Button button1 = (Button) findViewById(R.id.music);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -33,10 +36,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+        final TextView Sign_up = (TextView) findViewById(R.id.sign_up);
+        Sign_up.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View x){
+                    Intent sign_intent = new Intent(MainActivity.this, Sign_Up_Activity.class);
+                    startActivity(sign_intent);
+                }
+            });
 
 
-    public void onClick(View view) {
     }
 }
 class App extends Application{

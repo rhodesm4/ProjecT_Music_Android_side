@@ -3,10 +3,8 @@
     package="com.friendzone.learning_2017">
 
     <application
-
-        android:fullBackupContent="@android:xml"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/two_lines"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
@@ -21,21 +19,13 @@
             </intent-filter>
         </activity>
         <activity
-
-            android:name=".Server_Info"
-            android:label="@string/secondscreen">
-
-        </activity>
+            android:name=".Fynn_Activity"
+            android:label="@string/secondscreen"></activity>
         <activity
-
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Sign_Up_Activity"></activity>
     </application>
-
 
 </manifest>
