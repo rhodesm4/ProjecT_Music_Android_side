@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class Main2Activity extends AppCompatActivity {
 
     MediaPlayer mySong;
+    int paused = 0; //for keeping track of where in the song pause happened
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class Main2Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mySong = MediaPlayer.create(Main2Activity.this, R.raw.daft);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +46,8 @@ public class Main2Activity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,peopleFollowed);
         myListView.setAdapter(arrayAdapter);
 
-        final Button button = (Button) findViewById(R.id.button2);
+        //back button leads to previous screen
+        final Button button = (Button) findViewById(R.id.back);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Main2Activity.this, MainActivity.class);
@@ -53,9 +55,34 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
+    public boolean playing = false;
 
     public void play(View v){
-        mySong.start();
+        //        needed to play music
+        if(!playing && paused == 0 ) {
+            mySong = MediaPlayer.create(Main2Activity.this, R.raw.daft);
+            mySong.start();
+            playing = true;
+        }
+        else if ( paused != 0) {
+            mySong.seekTo(paused);
+            mySong.start();
+            playing = true;
+        }
+
+    }
+    public void stop(View v) {
+        if (playing) {
+            mySong.stop();
+            playing = false;
+        }
     }
 
+    public void pause(View view) {
+        if(playing){
+            mySong.pause();
+            paused = mySong.getCurrentPosition();
+            playing = false;
+        }
+    }
 }

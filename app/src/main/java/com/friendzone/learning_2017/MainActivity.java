@@ -27,14 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //what is this doing right here?
-        final Button button1 = (Button) findViewById(R.id.music);
-        button.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                startActivity(intent);
-            }
-        });
+
 
         final TextView Sign_up = (TextView) findViewById(R.id.sign_up);
         Sign_up.setOnClickListener(new View.OnClickListener(){
