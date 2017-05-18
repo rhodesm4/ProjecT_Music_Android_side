@@ -28,10 +28,12 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Snackbar.make(view, "This pyramids shall rise again all hail Psedo", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -56,6 +58,7 @@ public class Main2Activity extends AppCompatActivity {
         });
     }
     public boolean playing = false;
+    public int pos = 0;
 
     public void play(View v){
         //        needed to play music
@@ -78,11 +81,20 @@ public class Main2Activity extends AppCompatActivity {
         }
     }
 
-    public void pause(View view) {
+    public void pause(View v) {
         if(playing){
             mySong.pause();
             paused = mySong.getCurrentPosition();
             playing = false;
+        }
+    }
+
+    public void forward(View v){
+        if(playing){
+            pos = mySong.getCurrentPosition() + 30;
+
+            mySong.seekTo(pos);
+
         }
     }
 }
