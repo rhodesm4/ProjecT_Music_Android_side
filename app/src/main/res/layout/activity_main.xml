@@ -60,9 +60,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="67dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/button"
-        tools:text="Username" />
+        android:hint="Username"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/app_pass"
@@ -77,12 +76,11 @@
         android:layout_alignStart="@+id/username"
         android:layout_centerVertical="true"
         android:ems="10"
+        android:fontFamily="monospace"
         android:hint="Password"
         android:inputType="textPassword"
         android:selectAllOnFocus="false"
-        android:text="@string/button"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        tools:text="Password" />
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
         android:id="@+id/sign_up"
