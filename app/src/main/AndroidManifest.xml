@@ -20,12 +20,16 @@
         </activity>
         <activity
             android:name=".Fynn_Activity"
-            android:label="@string/secondscreen"></activity>
+            android:label="@string/secondscreen" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Sign_Up_Activity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Sign_Up_Activity" />
+        <activity
+            android:name=".Actual_App"
+            android:label="@string/title_activity_actual__app"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>
