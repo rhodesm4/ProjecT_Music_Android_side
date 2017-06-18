@@ -35,12 +35,12 @@ import com.squareup.okhttp.RequestBody;
 
 public class ServerRequest {
 
-
+//with new JSON capabilities we might not need this class
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
     OkHttpClient client = new OkHttpClient();
 
-    Call post(String url, String json, Callback callback) {
+     Call post(String url, String json, Callback callback) {
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
                 .url(url)
@@ -49,6 +49,7 @@ public class ServerRequest {
         Call call = client.newCall(request);
         call.enqueue(callback);
         return call;
+
     }
 
 }

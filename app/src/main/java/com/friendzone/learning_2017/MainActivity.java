@@ -1,7 +1,9 @@
 package com.friendzone.learning_2017;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,9 +28,14 @@ public class MainActivity extends AppCompatActivity {
     EditText Password;
     ServerRequest Request = new ServerRequest();
 
+
+
+
+
+
     public void login(View view) {
-        String json = "name:" + "" + Username.getText() + "" + "password:" + "" + Password.getText() + "";
-        Request.post("http://10.0.3.2:8000/smarthome/_session", json, new Callback() {
+        String json = "{"+"name:" + "" + Username.getText() +","+ "" + "password:" + "" + Password.getText() + "";
+        Request.post("http://exampleip:8000/"+Username.getText().toString(), json, new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
             }
@@ -77,12 +84,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (String.valueOf(Username.getText()).equals("i")) {
+                if (String.valueOf(Username.getText()).equals("Matthew")) {
                     if (String.valueOf(Password.getText()).equals("i")) {
                         Intent login_in = new Intent(MainActivity.this, Actual_App.class);
                         startActivity(login_in);
+                        Toast toast = Toast.makeText(getApplicationContext(), Username.getText().toString(), Toast.LENGTH_SHORT);
+                        toast.show();
                     }
                 }
+                login(view);
+
 
             }
 

@@ -21,12 +21,13 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    //compile project(':secondscreen')
+   // compile project(':secondscreen')
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:24.2.1'
     compile 'com.parse:parse-android:1.14.1'
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    //complie 'com.android.volley:volley:1.0.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
     testCompile 'junit:junit:4.12'
 }
-
-//test

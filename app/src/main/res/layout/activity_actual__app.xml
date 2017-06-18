@@ -32,8 +32,6 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_actual__app" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -42,5 +40,21 @@
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_actual__app"
+        android:layout_width="match_parent"
+        android:layout_height="872dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="768dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
