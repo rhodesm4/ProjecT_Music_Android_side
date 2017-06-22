@@ -27,25 +27,28 @@
         android:id="@+id/new_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
+        android:layout_marginBottom="20dp"
         android:onClick="onClick"
-        android:text="now playing" />
+        android:text="now playing"
+        android:layout_above="@+id/sign_up"
+        android:layout_centerHorizontal="true" />
         <!--tools:text="Login" />-->
 
     <Button
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/new_button"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="17dp"
         android:onClick="OnClick"
-        android:text="Login " />
+        android:text="Login "
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/app_user"
@@ -57,12 +60,12 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_above="@+id/password"
+        android:layout_toEndOf="@+id/app_user"
+        android:layout_marginBottom="19dp" />
 
     <TextView
         android:id="@+id/app_pass"
