@@ -10,6 +10,9 @@ import android.util.Log;
 //import android.view.View;
 import android.view.View;
 import android.widget.Button;
+
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.parse.Parse;
 import android.app.Application;
 import android.widget.EditText;
@@ -21,19 +24,18 @@ import android.net.NetworkRequest;
 import android.widget.Toast;
 
 import java.io.IOException;
+
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     EditText Username;
     EditText Password;
     ServerRequest Request = new ServerRequest();
+    String url = "http://ip.jsontest.com/";
+    String requestBody = "";
 
-
-
-
-
-
-    public void login(View view) {
+    /*public void login(View view) {
         String json = "{"+"name:" + "" + Username.getText() +","+ "" + "password:" + "" + Password.getText() + "";
         Request.post("http://exampleip:8000/"+Username.getText().toString(), json, new Callback() {
             @Override
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-    }
+    }*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,31 +86,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (String.valueOf(Username.getText()).equals("Matthew")) {
-                    if (String.valueOf(Password.getText()).equals("i")) {
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(com.android.volley.Request.Method.POST, url, requestBody, new com.android.volley.Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(getApplicationContext(), "Successful Login", Toast.LENGTH_LONG).show();
                         Intent login_in = new Intent(MainActivity.this, Actual_App.class);
                         startActivity(login_in);
-                        Toast toast = Toast.makeText(getApplicationContext(), Username.getText().toString(), Toast.LENGTH_SHORT);
-                        toast.show();
+
                     }
-                }
-                login(view);
+                }, new com.android.volley.Response.ErrorListener() {
 
-
+                    @Override
+                    public void onErrorResponse(VolleyError arg0) {
+                        // TODO Auto-generated method stub
+                    }
+                });
+                MySingleton.getInstance(MainActivity.this).addToRequestQueue(jsonObjectRequest);
             }
-
-
         });
-
-
-
-
-
-
-
-
-
     }
-
-
 }
